@@ -1,14 +1,14 @@
 {
     "DESIGN_NAME": "user_project_wrapper",
     "VERILOG_FILES": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/user_project_wrapper.v"],
-    "CLOCK_PERIOD": 10,
-    "CLOCK_PORT": "user_clock2",
+    "CLOCK_PERIOD": 25,
+    "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "mprj.clk",
     "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 vccd1 vssd1",
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
-    "VERILOG_FILES_BLACKBOX": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/user_proj_example.v"],
-    "EXTRA_LEFS": "dir::../../lef/user_proj_example.lef",
-    "EXTRA_GDS_FILES": "dir::../../gds/user_proj_example.gds",
+    "VERILOG_FILES_BLACKBOX": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/SPM_example.v"],
+    "EXTRA_LEFS": "dir::../../lef/SPM_example.lef",
+    "EXTRA_GDS_FILES": "dir::../../gds/SPM_example.gds",
     "FP_PDN_CHECK_NODES": 0,
     "SYNTH_ELABORATE_ONLY": 1,
     "PL_RANDOM_GLB_PLACEMENT": 1,
@@ -48,12 +48,16 @@
     "VDD_NETS": ["vccd1", "vccd2","vdda1","vdda2"],
     "GND_NETS": ["vssd1", "vssd2","vssa1","vssa2"],
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
+    "IO_SYNC": 0,
+    "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
+    "RUN_IRDROP_REPORT": 0,
+    "FP_PDN_IRDROP":0,
     "pdk::sky130*": {
         "RT_MAX_LAYER": "met4",
         "DIE_AREA": "0 0 2920 3520",
         "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def",
         "scl::sky130_fd_sc_hd": {
-            "CLOCK_PERIOD": 10
+            "CLOCK_PERIOD": 25
         },
         "scl::sky130_fd_sc_hdll": {
             "CLOCK_PERIOD": 10
