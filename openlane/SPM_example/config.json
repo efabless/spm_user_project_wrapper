@@ -1,0 +1,13 @@
+{
+    "DESIGN_NAME": "SPM_example",
+    "VERILOG_FILES": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/SPM_example.v"],
+    "CLOCK_PERIOD": 25,
+    "CLOCK_PORT": "wb_clk_i",
+    "CLOCK_NET": "SPM.clk",
+    "DIODE_INSERTION_STRATEGY": 3,
+    "RT_MAX_LAYER": "met4",
+    "FP_SIZING": "absolute",
+    "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
+    "DESIGN_IS_CORE": 1,
+    "DIE_AREA": "0 0 600 600"
+}
